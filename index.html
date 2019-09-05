@@ -12,7 +12,6 @@
         <header class="header">
             <h1>CHARLES OMOREGIE</h1>
             <div class="contact">
-                <!-- <h1>CHARLES OMOREGIE</h1> -->
                 <address>48, Osayande street, ogbeson qtrs, benin city</address>
                 <p>08170028831</p>
                 <strong><a href="mailto:charles081889@gmail.com">charles081889@gmail.com</a></strong>
@@ -157,32 +156,21 @@
 
         const modalDisplay = (modal, event)=> {
             const target = event.target;
-            console.log(target);
             if(target.classList.contains('close')) {
                 modal.classList.remove('active');
                 modal.nextElementSibling.style.opacity = '1';
                 return
             }
-            // const {images, category, textContent } = target;
             modal.nextElementSibling.style.opacity = '.4';
-            // document.body.style.opacity = '.4';
             modal.classList.add('active');
-            console.log()
         }
         const flagIfInvalid = (field, isValid) => {
             const flag = field.nextElementSibling;
-            console.log(flag);
-            console.log(isValid);
             (isValid) ? flag.classList.remove('is-invalid') : flag.classList.add('is-invalid');
-            console.log(flag);
         }
         
         const validateName = (field) => {
-            console.log(field.value)
             const isValid = (field.value.length >= 3) ? true : false;
-            console.log(isValid);
-         
-            // const pattern = /^([a-zA-Z]{3,})$/.test(name.value);
             flagIfInvalid(field, isValid);
             return isValid;
         };
@@ -208,13 +196,6 @@
             return isValid;
         };
 
-        const submitBtn = (isValid)=> {
-            const btn = document.querySelector('.contact--form > .btn');
-            // const isValid = (validateName() && validateEmail() && validateMessage()) ?
-            // true : false;
-            (isValid) ? btn.classList.remove('inactive') : btn.classList.add('inactive')
-        }
-
         const uiCanInteract = ()=> {
             let isValid;
             // contactBtn = document.querySelector('.contact--btn');
@@ -226,21 +207,14 @@
             const email = document.querySelector('.contact--form [name="email"]');
             // contactBtn.addEventListener('click',)
             modalToggle.forEach(el => el.addEventListener('click', (event)=> {
-                isValid = modalDisplay(modal, event)
+                modalDisplay(modal, event)
             }));
-            name.addEventListener('keyup', ()=> {
-                isValid = validateName(name)
-            });
-            email.addEventListener('keyup', ()=> { isValid = validateEmail(email)})
-            message.addEventListener('keyup', ()=> {isValid = validateMessage(message)});
-            submitBtn(isValid)
+            name.addEventListener('keyup', ()=> validateName(name));
+            email.addEventListener('keyup', ()=> validateEmail(email))
+            message.addEventListener('keyup', ()=> validateMessage(message));
         }
 
         document.addEventListener('DOMContentLoaded', ()=> {
-            // const allFields = document.querySelector('.field');
-            // allFields.forEach((field, index, fields) => {
-            //     field[1].addEventListener
-            // })
             uiCanInteract()
         })
     </script>
