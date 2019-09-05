@@ -12,6 +12,7 @@
         <header class="header">
             <h1>CHARLES OMOREGIE</h1>
             <div class="contact">
+                <!-- <h1>CHARLES OMOREGIE</h1> -->
                 <address>48, Osayande street, ogbeson qtrs, benin city</address>
                 <p>08170028831</p>
                 <strong><a href="mailto:charles081889@gmail.com">charles081889@gmail.com</a></strong>
@@ -126,24 +127,24 @@
                 <form class="contact--form">
                     <div class="col-2">
                         <div class="col-1">
-                            <input type="text" name="name" class="field" placeholder="Name">
+                            <input type="text" name="name" class="field" placeholder="Name" required>
                             <span class="warn">Minimum characters allowed: 4</span>
                         </div>
                         <div class="col-1">
-                            <input type="email" name="email" class="field" placeholder="Email">
+                            <input type="email" name="email" class="field" placeholder="Email" required>
                             <span class="warn">Email must include '@'</span>
                         </div>
                     </div>
                     <div class="col-1">
-                        <input type="text" name="title" class="field" placeholder="title">
+                        <input type="text" name="title" class="field" placeholder="title" required>
                         <span class="warn"></span>
                     </div>
                     <div class="col-1">
-                        <textarea class="message text-content" name="message" class="field" placeholder="Your Message"></textarea>
+                        <textarea class="message text-content" name="message" class="field" placeholder="Your Message" required></textarea>
                         <span class="warn">Minimum characters allowed: 20</span>
                         <span class="char--length">0</span>
                     </div>
-                    <input type="submit" value="Submit" class="btn">
+                    <button type="submit" disabled class="btn disabled">Submit</button>
                 </form>
                 
             </div>
@@ -164,27 +165,35 @@
             modal.nextElementSibling.style.opacity = '.4';
             modal.classList.add('active');
         }
-        const flagIfInvalid = (field, isValid) => {
+
+        const flagIfInvalid = (field, isValid, btn, allFields) => {
             const flag = field.nextElementSibling;
             (isValid) ? flag.classList.remove('is-invalid') : flag.classList.add('is-invalid');
+            if(isValid){
+                btn.disabled = false;
+                btn.classList.remove('disabled');
+            }else {
+                 btn.disabled = true;
+                 btn.classList.add('disabled');
+            }
         }
         
-        const validateName = (field) => {
+        const validateName = (field, btn) => {
             const isValid = (field.value.length >= 3) ? true : false;
-            flagIfInvalid(field, isValid);
+            flagIfInvalid(field, isValid, btn);
             return isValid;
         };
 
-        const validateEmail = (field)=> {
+        const validateEmail = (field, btn)=> {
             const isValid = field.value.split('').includes('@');
-            flagIfInvalid(field, isValid);
+            flagIfInvalid(field, isValid, btn);
             return isValid;
         };
 
-        const validateMessage = (field)=> {
+        const validateMessage = (field, btn)=> {
             const valueLength =  field.value.length;
             const isValid = (valueLength >= 20) ? true : false;
-            flagIfInvalid(field, isValid);
+            flagIfInvalid(field, isValid, btn);
             const char_length = document.querySelector('.char--length');
             char_length.textContent = field.value.length;
             if(valueLength >= 20) {
@@ -198,20 +207,19 @@
 
         const uiCanInteract = ()=> {
             let isValid;
-            // contactBtn = document.querySelector('.contact--btn');
+            const btn = document.querySelector('.contact--form > .btn');
+            console.log(btn);
             const modal = document.querySelector('.modal--box');
             const modalToggle = document.querySelectorAll('.modal-toggle');
             const name = document.querySelector('.contact--form [name="name"]');
-            // console.log(name.value);
             const message = document.querySelector('.contact--form [name="message"]');
             const email = document.querySelector('.contact--form [name="email"]');
-            // contactBtn.addEventListener('click',)
             modalToggle.forEach(el => el.addEventListener('click', (event)=> {
                 modalDisplay(modal, event)
             }));
-            name.addEventListener('keyup', ()=> validateName(name));
-            email.addEventListener('keyup', ()=> validateEmail(email))
-            message.addEventListener('keyup', ()=> validateMessage(message));
+            name.addEventListener('keyup', ()=> validateName(name, btn));
+            email.addEventListener('keyup', ()=> validateEmail(email, btn))
+            message.addEventListener('keyup', ()=> validateMessage(message, btn));
         }
 
         document.addEventListener('DOMContentLoaded', ()=> {
