@@ -5,131 +5,244 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My CV</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header>
-        <address>48, OSAYANDE STREET, OGBESON QTRS, BENIN CITY</address>
-        <p>08170028831</p>
-        <strong><a href="mailto:charles081889@gmail.com">charles081889@gmail.com</a></strong>
-    </header>
-    <main>
-        <h1 text-align="center">CHARLES OMOREGIE</h1><br>
-        <img width="150px" height="165px" src="https://res.cloudinary.com/dx5lp5drd/image/upload/v1566505654/IMG_20190615_134638_qex57k.jpg" alt="my profile">
-
-        <hr>
-        <section>
-            <h2>ABOUT ME</h2>
-            <p>I am a very diligent learner, enthusiastic in web development
-                 and other modern technologies. This has always been my passion.
-                  How beautiful it seems to be working with other techies as a team.
-                Innovation is my thirst.
-            </p>
-        </section><hr>
-        <section>
-            <table>
-                <h2>BIODATA</h2>
-                <tr>
-                    <td>
-                        <p><b>Date of Birth: </b> April 16, 1999</p>
-                        <p><b>State of Origin: </b> Edo State</p>
-                        <p><b>Nationality: </b> Nigerian</p>
-                        <p><b>Sex: </b> Male</p>
-                        <p><b>Marital Status: </b> Single</p>
-                    </td>
-
-                </tr>
-            </table>
+    <div class="page-wrapper">
+        <header class="header">
+            <h1>CHARLES OMOREGIE</h1>
+            <div class="contact">
+                <!-- <h1>CHARLES OMOREGIE</h1> -->
+                <address>48, Osayande street, ogbeson qtrs, benin city</address>
+                <p>08170028831</p>
+                <strong><a href="mailto:charles081889@gmail.com">charles081889@gmail.com</a></strong>
+            </div>
+            <div class="image-container">
+                <img src="https://res.cloudinary.com/dx5lp5drd/image/upload/v1567011898/IMG_20180414_054243-removebg-preview_bcmxmw.png" alt="my profile">
+            </div>
+        </header>
+    
+        <main class="main--content">
+            <div class="col col-1">
+                <section>
+                    <h2 class="section--heading">ABOUT ME</h2>
+                    <p class="text-content">I am a very diligent learner, enthusiastic in web development
+                        and other modern technologies. This has always been my passion.
+                        How beautiful it seems to be working with other techies as a team.
+                        Innovation is my thirst.
+                    </p>
+                </section>
+                <section>
+                    <h3 class="section--heading">BIODATA</h3>
+                    <div class="text--content" data-bio>
+                        <p>Date of Birth: <span class="grey">April 16, 1999</span></p>
+                        <p>State of Origin: <span class="grey"> Edo State</span></p>
+                        <p>Nationality: <span class="grey"> Nigerian</span></p>
+                        <p>Sex: <span class="grey"> Male</span></p>
+                        <p>Marital Status: <span class="grey"> Single</span></p>
+                    </div>
+                </section>
+                <section>
+                    <h2 class="section--heading">SKILLS</h2>
+                    <ul class="text-content">    
+                        <li>Frontend web developer -
+                            proficient in HTML5, CSS3, JavaScript(ES6), Material Design
+                        </li>
+                        <li>Ability to work with Microsoft Excel, Powerpoint</li>
+                        <li>Blogging</li>
+                        <li>Search Engine Optimization (SEO) Intermediate</li>
+                        <li>Git</li>
+                    </ul>
+                </section>
+            </div>
+            <div class="col col-2">
+                <section>
+                    <h2 class="section--heading">EXPERIENCE</h2>
+                    <div class="text-content">
+                        <section>
+                            <h3>SELF-EMPLOYED, BENIN CITY -</h3>
+                            <h4 class="job--role"><i>Frontend Developer</i></h4>
+                            <h5 class="date">January 2019 - Current</h5>
+                            <ul>
+                                <li>Developed a client-sided e-commerce website with cart support</li>
+                                <li>Developing a service-rendering web app</li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h3>BLOGGER -</3>
+                            <h4 class="job--role"><i>Content Writer</i></h4>
+                            <h5 class="date">May 2016 - November 2019</h5>
+                            <ul>
+                                <li>Content writer 
+                                    <a href="oshetech.com">@Oshetechblog</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </section>
             
-        </section><hr>
-        <section>
-            <table>
-                <tr>
-                    <h2>SKILLS</h2>
-                    <td>
-                        <ul>
-                            <li>Frontend web developer -
-                                proficient in HTML5, CSS3, JavaScript(ES6), Material Design
-                            </li>
-                            <li>Ability to work with Microsoft Excel, Powerpoint</li>
-                            <li>Blogging</li>
-                            <li>Search Engine Optimization (SEO) Intermediate</li>
-                            <li>Git</li>
-                        </ul>
-                    </td>
-                </tr>
-            </table>
-        </section> <hr>
+                <section>
+                    <h2 class="section--heading">EDUCATION</h2>
+                    <div class="text-content">
+                        <section>
+                            <h3>EDOKPOLOR GRAMMAR SCHOOL, BENIN CITY -</h3>
+                            <h4 class="achieve"><i>West Africa Examination Council (WAEC)</i></h4>
+                            <h5 class="date">September 2010 - August 2016</h5>
+                        </section>
+                        <section>
+                            <h3>UNIVERSITY OF BENIN, BENIN CITY -</h3>
+                            <h4 class="achieve"><i>Bachelor of Science in Pure/Applied Physics</i></h4>
+                            <h5 class="date">December 2017 - Current</h5>
+                            <p>Studying Physics and relating its application to computer networking</p>
+                        </section>
+                    </div>
+                </section>
 
-        <section>
-            <table>
-                <h2>EXPERIENCE</h2>
-                <tr>
-                    <td>
-                        <h3><i>SELF-EMPLOYED, BENIN CITY -</i><h3>
-                        <h4>Frontend Developer</h4>
-                        <h5>January 2019 - Current</h5>
-                        <ul>
-                            <li>Developed a client-sided e-commerce website with cart support</li>
-                            <li>Developing a service-rendering web app</li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <h3><i>BLOGGER -</i></3>
-                        <h4>Content Writer</h4>
-                        <h5>May 2016 - November 2019</h5>
-                        <ul>
-                            <li>Content writer 
-                                <a href="oshetech.com">@Oshetechblog</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-            </table>
-        </section><hr>
-           
+                <section>
+                    <h2 class="section--heading">OTHER INTERESTS</h2>
+                    <ul class="text-content">
+                        <li> Music</li>
+                        <li>Playing the piano</li>
+                        <li>Writing</li>
+                        <li>Reading</li>
+                    </ul>
+                </section>
 
-        <section>
-            <table>
-                <h2>EDUCATION</h2>
-                <tr>
-                    <td>
-                        <h3><i>EDOKPOLOR GRAMMAR SCHOOL, BENIN CITY -</i></h3>
-                        <h4>West Africa Examination Council (WAEC)</h4>
-                        <h5>September 2010 - August 2016</h5>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <h3><i>UNIVERSITY OF BENIN, BENIN CITY -</i></h3>
-                        <h4>Bachelor of Science in Pure/Applied Physics</h4>
-                        <h5>December 2017 - Current</h5>
-                        <p>Studying Physics and relating its application to computer networking</p>
-                    </td>
-                </tr>
-            </table>
-        </section><hr>
+                <section>
+                    <h2 class="section--heading">AWARDS</h2>
+                    <ul class="text-content">
+                        <li>
+                            International Astronomy and Astrophysics Competition (IAAC)
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            
+        </main>
 
-        <section>
-            <h2>OTHER INTERESTS/HOBBIES</h2>
-            <ul>
-                <li> Music</li>
-                <li>Playing the piano</li>
-                <li>Writing</li>
-                <li>Reading</li>
-            </ul>
-        </section><hr>
+        <div class="modal--box">
+            <div class="close modal-toggle">X</div>
+            <div class="content-wrapper">
+                <h2 class="section--heading">CONTACT ME</h2>
+                <form class="contact--form">
+                    <div class="col-2">
+                        <div class="col-1">
+                            <input type="text" name="name" class="field" placeholder="Name">
+                            <span class="warn">Minimum characters allowed: 4</span>
+                        </div>
+                        <div class="col-1">
+                            <input type="email" name="email" class="field" placeholder="Email">
+                            <span class="warn">Email must include '@'</span>
+                        </div>
+                    </div>
+                    <div class="col-1">
+                        <input type="text" name="title" class="field" placeholder="title">
+                        <span class="warn"></span>
+                    </div>
+                    <div class="col-1">
+                        <textarea class="message text-content" name="message" class="field" placeholder="Your Message"></textarea>
+                        <span class="warn">Minimum characters allowed: 20</span>
+                        <span class="char--length">0</span>
+                    </div>
+                    <input type="submit" value="Submit" class="btn inactive">
+                </form>
+                
+            </div>
+        </div>
 
-        <section>
-            <h2>AWARDS</h2>
-            <ul>
-                <li>
-                    International Astronomy and Astrophysics Competition (IAAC)
-                </li>
-            </ul>
-        </section>
-    </main>
+        <div class="contact--btn modal-toggle">Contact Me Now</div>
+    </div> 
 
+    <script type="text/JavaScript">
+
+        const modalDisplay = (modal, event)=> {
+            const target = event.target;
+            console.log(target);
+            if(target.classList.contains('close')) {
+                modal.classList.remove('active');
+                modal.nextElementSibling.style.opacity = '1';
+                return
+            }
+            // const {images, category, textContent } = target;
+            modal.nextElementSibling.style.opacity = '.4';
+            // document.body.style.opacity = '.4';
+            modal.classList.add('active');
+            console.log()
+        }
+        const flagIfInvalid = (field, isValid) => {
+            const flag = field.nextElementSibling;
+            console.log(flag);
+            console.log(isValid);
+            (isValid) ? flag.classList.remove('is-invalid') : flag.classList.add('is-invalid');
+            console.log(flag);
+        }
+        
+        const validateName = (field) => {
+            console.log(field.value)
+            const isValid = (field.value.length >= 3) ? true : false;
+            console.log(isValid);
+         
+            // const pattern = /^([a-zA-Z]{3,})$/.test(name.value);
+            flagIfInvalid(field, isValid);
+            return isValid;
+        };
+
+        const validateEmail = (field)=> {
+            const isValid = field.value.split('').includes('@');
+            flagIfInvalid(field, isValid);
+            return isValid;
+        };
+
+        const validateMessage = (field)=> {
+            const valueLength =  field.value.length;
+            const isValid = (valueLength >= 20) ? true : false;
+            flagIfInvalid(field, isValid);
+            const char_length = document.querySelector('.char--length');
+            char_length.textContent = field.value.length;
+            if(valueLength >= 20) {
+                char_length.style.backgroundColor = 'var(--success)'
+            }
+            else {
+                char_length.style.backgroundColor = 'var(--danger)'
+            }
+            return isValid;
+        };
+
+        const submitBtn = (isValid)=> {
+            const btn = document.querySelector('.contact--form > .btn');
+            // const isValid = (validateName() && validateEmail() && validateMessage()) ?
+            // true : false;
+            (isValid) ? btn.classList.remove('inactive') : btn.classList.add('inactive')
+        }
+
+        const uiCanInteract = ()=> {
+            let isValid;
+            // contactBtn = document.querySelector('.contact--btn');
+            const modal = document.querySelector('.modal--box');
+            const modalToggle = document.querySelectorAll('.modal-toggle');
+            const name = document.querySelector('.contact--form [name="name"]');
+            // console.log(name.value);
+            const message = document.querySelector('.contact--form [name="message"]');
+            const email = document.querySelector('.contact--form [name="email"]');
+            // contactBtn.addEventListener('click',)
+            modalToggle.forEach(el => el.addEventListener('click', (event)=> {
+                isValid = modalDisplay(modal, event)
+            }));
+            name.addEventListener('keyup', ()=> {
+                isValid = validateName(name)
+            });
+            email.addEventListener('keyup', ()=> { isValid = validateEmail(email)})
+            message.addEventListener('keyup', ()=> {isValid = validateMessage(message)});
+            submitBtn(isValid)
+        }
+
+        document.addEventListener('DOMContentLoaded', ()=> {
+            // const allFields = document.querySelector('.field');
+            // allFields.forEach((field, index, fields) => {
+            //     field[1].addEventListener
+            // })
+            uiCanInteract()
+        })
+    </script>
 </body>
 </html>
