@@ -12,6 +12,7 @@
         <header class="header">
             <h1>CHARLES OMOREGIE</h1>
             <div class="contact">
+                <!-- <h1>CHARLES OMOREGIE</h1> -->
                 <address>48, Osayande street, ogbeson qtrs, benin city</address>
                 <p>08170028831</p>
                 <strong><a href="mailto:charles081889@gmail.com">charles081889@gmail.com</a></strong>
@@ -73,7 +74,7 @@
                             <h5 class="date">May 2016 - November 2019</h5>
                             <ul>
                                 <li>Content writer 
-                                    <a href="https://oshetech.blogspot.com">@Oshetechblog</a>
+                                    <a href="oshetech.com">@Oshetechblog</a>
                                 </li>
                             </ul>
                         </section>
@@ -123,7 +124,7 @@
             <div class="close modal-toggle">X</div>
             <div class="content-wrapper">
                 <h2 class="section--heading">CONTACT ME</h2>
-                <form class="contact--form">
+                <form action="mail.php" method="POST" class="contact--form">
                     <div class="col-2">
                         <div class="col-1">
                             <input type="text" name="name" class="field" placeholder="Name" required>
@@ -156,13 +157,17 @@
 
         const modalDisplay = (modal, event)=> {
             const target = event.target;
+            console.log(target);
             if(target.classList.contains('close')) {
                 modal.classList.remove('active');
                 modal.nextElementSibling.style.opacity = '1';
                 return
             }
+            // const {images, category, textContent } = target;
             modal.nextElementSibling.style.opacity = '.4';
+            // document.body.style.opacity = '.4';
             modal.classList.add('active');
+            console.log()
         }
 
         const flagIfInvalid = (field, isValid, btn, allFields) => {
@@ -178,7 +183,12 @@
         }
         
         const validateName = (field, btn) => {
+            console.log(field.value)
             const isValid = (field.value.length >= 3) ? true : false;
+            // (isValid) ? 
+            console.log(isValid);
+         
+            // const pattern = /^([a-zA-Z]{3,})$/.test(name.value);
             flagIfInvalid(field, isValid, btn);
             return isValid;
         };
@@ -204,6 +214,17 @@
             return isValid;
         };
 
+        // const submitBtn = (isValid)=> {
+        //     const btn = document.querySelector('.contact--form > .btn');
+        //     // const isValid = (validateName() && validateEmail() && validateMessage()) ?
+        //     // true : false;
+        //     (isValid) ? btn.classList.remove('inactive') : btn.classList.add('inactive')
+        // }
+
+        // const allowSubmit = ()=> {
+        //     const
+        // }
+
         const uiCanInteract = ()=> {
             let isValid;
             const btn = document.querySelector('.contact--form > .btn');
@@ -211,17 +232,25 @@
             const modal = document.querySelector('.modal--box');
             const modalToggle = document.querySelectorAll('.modal-toggle');
             const name = document.querySelector('.contact--form [name="name"]');
+            // console.log(name.value);
             const message = document.querySelector('.contact--form [name="message"]');
             const email = document.querySelector('.contact--form [name="email"]');
+            // contactBtn.addEventListener('click',)
             modalToggle.forEach(el => el.addEventListener('click', (event)=> {
                 modalDisplay(modal, event)
             }));
             name.addEventListener('keyup', ()=> validateName(name, btn));
             email.addEventListener('keyup', ()=> validateEmail(email, btn))
             message.addEventListener('keyup', ()=> validateMessage(message, btn));
+            // if(name)
+            // submitBtn(isValid)
         }
 
         document.addEventListener('DOMContentLoaded', ()=> {
+            // const allFields = document.querySelector('.field');
+            // allFields.forEach((field, index, fields) => {
+            //     field[1].addEventListener
+            // })
             uiCanInteract()
         })
     </script>

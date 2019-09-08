@@ -381,18 +381,13 @@ section {
     cursor: pointer;
 }
 
-.btn.inactive {
-    cursor: not-allowed ;
-    background: #a0a0a0;
-    color: #000;
-}
-
-
 .btn.disabled {
     cursor: not-allowed ;
     background: #a0a0a0;
     color: #000;
 }
+
+
 
 input[type="submit"]:hover {
     box-shadow: 2px 3px 4px #a0a0a0;
